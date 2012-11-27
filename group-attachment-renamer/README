@@ -28,5 +28,6 @@ How to use this script:
     
     for f in $MAIN/TEST-$i/*
 
-4.  Also, set the path of your CSV file in the (done < /home/jalex/Desktop/TEMP/DUCR/attachment.csv)
-    section. Using absolute path is recommended.
+4.  Also, set the path of your CSV file in the 
+    (done < /home/jalex/Desktop/TEMP/DUCR/attachment.csv) section. 
+    Using absolute path is recommended.
