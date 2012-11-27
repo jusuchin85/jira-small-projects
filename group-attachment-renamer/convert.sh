@@ -9,7 +9,8 @@
 
 #!/bin/bash
 # Here is where you insert the path of a project's attachment
-# normally '<JIRA_HOME>/data/attachments/<PROJECT_KEY>
+# normally it's best to copy the entire <PROJECT_KEY> folder to not tamper
+# with existing data.
 MAIN=/home/jalex/Desktop/TEMP/DUCR
 
 # adjust the values in the loop {1..925} to cater for the first directory to the last one
