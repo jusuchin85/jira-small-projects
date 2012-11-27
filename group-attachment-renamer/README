@@ -1,0 +1,32 @@
+Preparation before you begin:
+
+1.  Run the following SQL query for your JIRA database, replacing <YOUR_PROJECT_KEY>
+    with the project key that you are interested in:
+
+    select id, filename from fileattachment where issueid in (
+                     select id from jiraissue where pkey like '<YOUR_PROJECT_KEY>%');
+
+2.  Save the result to a CSV file.
+3.  Edit the CSV file to exclude the headers and change the delimeter to ','.
+
+How to use this script:
+
+1.  Open the script for editing
+2.  Under MAIN, set the relevant <JIRA_HOME>/data/attachments/<PROJECT_KEY> for the
+    project that you wish its attachments to be manipulated.
+
+    An example of this would be:
+
+    MAIN=/data/jira-home/data/attachments/TEST
+
+3.  Under (cd $MAIN/DUCR-$i) and (for f in $MAIN/DUCR-$i/*) lines, change 'DUCR' to
+    your project key.
+
+    For example:
+
+    cd $MAIN/TEST-$i
+    
+    for f in $MAIN/TEST-$i/*
+
+4.  Also, set the path of your CSV file in the (done < /home/jalex/Desktop/TEMP/DUCR/attachment.csv)
+    section. Using absolute path is recommended.
